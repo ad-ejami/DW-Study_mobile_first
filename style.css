@@ -379,13 +379,21 @@ main{
     line-height: 1.8rem;
     color: #808080;
 }
+.plans-container--slider{
+    display: flex;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: x proximity;
+}
 .plans-container--card{
     position: relative;
+    scroll-snap-align: center;
     width: 70%;
-    min-width: 230px;
+    min-width: 190px;
     max-width: 300px;
     height: 250px;
-    margin: 50px auto 0;
+    margin: 50px 5px 0;
     padding: 0 15px;
     background-color: var(--just-white);
     border-radius: 15px;
@@ -471,11 +479,12 @@ main{
 }
 .plans-container--card-premium{
     position: relative;
+    scroll-snap-align: center;
     width: 70%;
-    min-width: 230px;
+    min-width: 190px;
     max-width: 300px;
     height: 250px;
-    margin: 50px auto 0;
+    margin: 50px 5px 0;
     padding: 0 15px;
     background-color: var(--warm-black);
     border-radius: 15px;
@@ -510,5 +519,30 @@ main{
     font-size: 1.4rem;
     font-weight: bold;
     line-height: 1.8rem;
+    color: var(--just-white);
+}
+footer{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+footer section{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+}
+footer .left ul{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+}
+.left li{
+    margin: 10px 0;
+}
+.left a{
+    text-decoration: none;
     color: var(--just-white);
 }
